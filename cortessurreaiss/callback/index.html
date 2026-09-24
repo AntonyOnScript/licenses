@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Authorization received</title>
+<style>
+  :root { color-scheme: light dark; }
+  body { font: 16px/1.6 system-ui, sans-serif; max-width: 46rem; margin: 2rem auto; padding: 0 1rem; }
+  h1 { font-size: 1.6rem; } h2 { font-size: 1.15rem; margin-top: 2rem; }
+  code { background: rgba(127,127,127,.2); padding: .1em .35em; border-radius: 4px; word-break: break-all; }
+  hr { margin: 2.5rem 0; border: 0; border-top: 1px solid rgba(127,127,127,.4); }
+  small { opacity: .7; }
+</style></head><body>
+<h1>Authorization received / Autorização recebida</h1>
+<p>You can close this page. To finish the setup, copy the <strong>full address</strong> of this page (or the code below) and paste it into the terminal.</p>
+<p>Você pode fechar esta página. Para concluir, copie o <strong>endereço completo</strong> desta página (ou o código abaixo) e cole no terminal.</p>
+<p>code: <code id="code">-</code></p>
+<p><small>This page runs entirely in your browser and sends nothing anywhere. / Esta página roda só no seu navegador e não envia nada a lugar nenhum.</small></p>
+<script>
+  // só mostra na tela o "code" que a TikTok colocou na URL; não envia nada
+  var params = new URLSearchParams(window.location.search);
+  document.getElementById("code").textContent = params.get("code") || "(no code in the address / sem código no endereço)";
+</script>
+</body></html>
